@@ -2540,4 +2540,12 @@ class SolarCommunityLinearIcons {
   static const IconData xxx = IconData(0xf5e4, fontFamily: 'SolarCommunityLinearIcons', fontPackage: 'solar_community_icons');
   /// Linear icon: zipFile.
   static const IconData zipFile = IconData(0xf5e5, fontFamily: 'SolarCommunityLinearIcons', fontPackage: 'solar_community_icons');
+  /// Linear icon: bee.
+  static const IconData bee = IconData(0xf5e6, fontFamily: 'SolarCommunityLinearIcons', fontPackage: 'solar_community_icons');
+  /// Linear icon: car.
+  static const IconData car = IconData(0xf5e7, fontFamily: 'SolarCommunityLinearIcons', fontPackage: 'solar_community_icons');
+  /// Linear icon: concreteMixer.
+  static const IconData concreteMixer = IconData(0xf5e8, fontFamily: 'SolarCommunityLinearIcons', fontPackage: 'solar_community_icons');
+  /// Linear icon: saw.
+  static const IconData saw = IconData(0xf5e9, fontFamily: 'SolarCommunityLinearIcons', fontPackage: 'solar_community_icons');
 }
