@@ -2548,4 +2548,6 @@ class SolarCommunityLinearIcons {
   static const IconData concreteMixer = IconData(0xf5e8, fontFamily: 'SolarCommunityLinearIcons', fontPackage: 'solar_community_icons');
   /// Linear icon: saw.
   static const IconData saw = IconData(0xf5e9, fontFamily: 'SolarCommunityLinearIcons', fontPackage: 'solar_community_icons');
+  /// Linear icon: microphoneMuted.
+  static const IconData microphoneMuted = IconData(0xf5ea, fontFamily: 'SolarCommunityLinearIcons', fontPackage: 'solar_community_icons');
 }

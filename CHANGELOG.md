@@ -1,3 +1,10 @@
+## 1.3.0
+
+- Add `microphoneMuted` in both styles: the set's `microphone` icon with a mute
+  slash, so the two swap in place. The existing `muted` icon is a speaker.
+- Add `scripts/custom_icons/append_to_fonts.py`, which appends a glyph after the
+  last code point. Every existing code point and outline is unchanged.
+
 ## 1.2.0
 
 - Add four custom icons in both styles, drawn on the Solar grid: `bee`, `car`,

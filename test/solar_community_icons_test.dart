@@ -25,6 +25,11 @@ void main() {
       expect(SolarCommunityBoldIcons.saw.codePoint, 0xf5ed);
     });
 
+    test('microphoneMuted is appended in both styles', () {
+      expect(SolarCommunityLinearIcons.microphoneMuted.codePoint, 0xf5ea);
+      expect(SolarCommunityBoldIcons.microphoneMuted.codePoint, 0xf5ee);
+    });
+
     test('use the package fonts', () {
       expect(
         SolarCommunityLinearIcons.car.fontFamily,

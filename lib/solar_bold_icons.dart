@@ -2541,4 +2541,6 @@ class SolarCommunityBoldIcons {
   static const IconData concreteMixer = IconData(0xf5ec, fontFamily: 'SolarCommunityBoldIcons', fontPackage: 'solar_community_icons');
   /// Bold icon: saw.
   static const IconData saw = IconData(0xf5ed, fontFamily: 'SolarCommunityBoldIcons', fontPackage: 'solar_community_icons');
+  /// Bold icon: microphoneMuted.
+  static const IconData microphoneMuted = IconData(0xf5ee, fontFamily: 'SolarCommunityBoldIcons', fontPackage: 'solar_community_icons');
 }

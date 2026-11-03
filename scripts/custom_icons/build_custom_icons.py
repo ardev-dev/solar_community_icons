@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import math
 import pathlib
+import re
 
 import pathops
 from picosvg.svg_pathops import skia_path, svg_commands
@@ -210,11 +211,40 @@ def bee():
     return linear, bold
 
 
+def _existing_icon(style: str, name: str) -> pathops.Path:
+    """The outline of an icon already in the set, exactly as it ships."""
+    source = (ROOT / "assets/icons" / style / f"{name}.svg").read_text()
+    d = re.search(r' d="([^"]+)"', source).group(1)
+    p = skia_path(SVGPath(d=d).as_cmd_seq(), "evenodd")
+    p.convertConicsToQuads()
+    return p
+
+
+def _with_slash(icon: pathops.Path) -> pathops.Path:
+    """Adds a 45-degree slash, cleared on its upper right so it reads at small sizes."""
+    gap = 1.2
+    offset = gap / 2 / math.sqrt(2)
+    clearance = stroke(
+        path(f"M{4 + offset} {4 - offset} L{20 + offset} {20 - offset}"),
+        STROKE + gap,
+    )
+    return union(diff(icon, clearance), stroke(path("M4 4 L20 20")))
+
+
+def microphone_muted():
+    """The set's `microphone` icon with a mute slash, so the two swap in place."""
+    return (
+        _with_slash(_existing_icon("linear", "microphone")),
+        _with_slash(_existing_icon("bold", "microphone")),
+    )
+
+
 ICONS = {
     "car": car,
     "saw": saw,
     "concrete_mixer": concrete_mixer,
     "bee": bee,
+    "microphone_muted": microphone_muted,
 }
 
 
