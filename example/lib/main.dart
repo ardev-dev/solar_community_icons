@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:solar_community_icons/solar_community_icons.dart';
 
 const title = 'solar community icons';
